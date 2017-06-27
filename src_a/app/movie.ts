@@ -3,6 +3,7 @@ export class Movie {
     title: String;
     en_title: String;
     img: String;
+    img_2: String;
     details: String[];
     scheduals: Time[];
 }

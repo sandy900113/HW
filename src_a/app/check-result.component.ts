@@ -11,14 +11,14 @@ import 'rxjs/add/operator/switchMap';
 @Component({
   selector: 'CheckResult',
   template: `
-    <h1>{{title}}</h1>
+    <h1 style="font-family:Microsoft JhengHei">{{title}}</h1>
     <span *ngIf="loading==true">
       Loading..
     </span>
     <span *ngIf="loading==false">
       <span *ngFor="let order of checkOrders; let i = index">
         <ul>
-          <p>Order {{i+1}}</p>
+          <p style="font-weight:bold">Order {{i+1}}</p>
 
           <!--
           <li>order id:{{order.id}}<li>
@@ -36,7 +36,7 @@ import 'rxjs/add/operator/switchMap';
 
         </ul>
       </span>
-      <span *ngIf="checkOrders.length==0">
+      <span *ngIf="checkOrders.length==0" style="font-family:Microsoft JhengHei;font-size:20px">
         查無符合項目的訂單
       </span>
 

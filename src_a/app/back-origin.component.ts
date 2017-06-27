@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'BackOrigin',
   template:`
-    <a routerLink="" routerLinkActive="active">回到主畫面</a>
-    <a routerLink="/check" routerLinkActive="active">回到查詢頁面</a>
+    <a routerLink="" routerLinkActive="active" class="Home">回首頁</a>
+    <a routerLink="/check" routerLinkActive="active" class="Memory">查詢記錄</a>
     <p></p>
     <p></p>
     `,

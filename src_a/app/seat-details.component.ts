@@ -19,19 +19,13 @@ import 'rxjs/add/operator/switchMap';
     </span>
     <span *ngIf="loading==false">
       <div *ngIf="selected">
-        <span>電影</span>
+        <span style="font-family:Microsoft JhengHei;font-size:20px">電影</span>
         <span>
           <select [(ngModel)]="selected" (ngModelChange)="onChangeMovie()">
             <option [ngValue]="movie" *ngFor="let movie of DataOfMovie">{{movie.title}}</option>
           </select>
         </span>
-        
-        <p></p>
-        <!--
-        <span *ngIf="selected">{{selected.title}}</span>
-        <p></p> -->
-
-        <span>時間</span>
+        <span style="font-family:Microsoft JhengHei;font-size:20px">時間</span>
         <select [(ngModel)]="selectedTime" (ngModelChange)="onChangeTime()">
           <option [ngValue]="time" *ngFor="let time of selected.scheduals">
             {{time.fullTime}}
@@ -54,7 +48,7 @@ import 'rxjs/add/operator/switchMap';
 
       <div>
         <button (click)="goBack()">回首頁</button>
-        <button (click)="preBook()">下一步</button>
+        <button (click)="preBook()" *ngIf="selectedSeats.length>0">下一步</button>
       </div>
     </span>
 
@@ -72,7 +66,6 @@ export class SeatDetails implements OnInit{
    soldSeats: number[]=[3,5,6,21];
    selectedSeats: Array<Seat>=new Array<Seat>();
    preOrders: Order[]=[];
-
    loading:boolean=true;
 
    constructor(

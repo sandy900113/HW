@@ -17,20 +17,18 @@ import 'rxjs/add/operator/switchMap';
     <span *ngIf="loading==false">
       <ul *ngIf="movie">
         <figure>
-          <img height="300px" width="200px" src={{movie.img}}/>
+          <img height="400px" width="600px" src={{movie.img_2}}/>
           <figcaption></figcaption>
         </figure>
-
-        <p>Title:</p>
-          <ul>
-            <h5>{{movie.title}}</h5>
-            <h4>{{movie.en_title}}</h4>
+        <p style="font-family:New Roman;font-size:20px">Title:</p>
+          <ul style="font-family:Microsoft JhengHei;font-size:20px;position: relative;top:-20px">
+              {{movie.title}}<p style="font-family:New Roman;font-size:20px">{{movie.en_title}}</p>
           </ul>
-        <p>影片資訊:</p>
-          <ul>  
+        <p style="font-family:Microsoft JhengHei;font-size:20px">影片資訊:</p>
+          <ul >  
             <p *ngFor="let string of movie.details">{{string}}</p>
           </ul>
-        <p>Time:</p>
+        <p style="font-family:New Roman;font-size:20px">Time:</p>
           <ul>
             <p *ngFor="let time of movie.scheduals">
               {{time.fullTime}}

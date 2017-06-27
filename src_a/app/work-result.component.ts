@@ -11,7 +11,7 @@ import 'rxjs/add/operator/switchMap';
 @Component({
   selector: 'WorkResult',
   template: `
-    <h1>{{title}}</h1>
+    <h1 style="font-family:Microsoft JhengHei">{{title}}</h1>
 
     <span *ngIf="loading==true">
       Loading
@@ -26,10 +26,10 @@ import 'rxjs/add/operator/switchMap';
       <p></p>
       <span *ngFor="let order of preOrders; let i = index">
         <ul>
-          <p>
+          <p style="font-weight:bold">
             Order {{i+1}}  
             <span *ngIf="success_each[i]==true && success==true">
-              (已訂位)
+              (已成功訂位)
             </span>
             <span *ngIf="success_each[i]==true && success==false">
               (尚可訂位)
@@ -49,9 +49,11 @@ import 'rxjs/add/operator/switchMap';
           <br><li>movie:{{DataOfMovie[order.movie_id-1].title}}</li>
           <br><li>time :{{DataOfMovie[order.movie_id-1].scheduals[order.time_id-1].fullTime}}</li>
           <br><li>seat num:{{order.seat_number}}</li>
-          <br><li>Name  :{{order.name}}</li>
-          <br><li>Phone :{{order.phone}}</li>
-          <br><li>E-mail:{{order.email}}</li>
+          <span *ngIf="success_each[i]==true">
+            <br><li>Name  :{{order.name}}</li>
+            <br><li>Phone :{{order.phone}}</li>
+            <br><li>E-mail:{{order.email}}</li>
+          </span>
 
         </ul>
       </span>
@@ -72,11 +74,11 @@ import 'rxjs/add/operator/switchMap';
           line-height: 1em;
           position: relative;
           left: -1px;
-          top: -4px;
-          /*height: 1.8em;*/       
+          top: -4px;    
     }
     .red{
       color:red;
+      font-family:Microsoft JhengHei;
     }
   `]
 })

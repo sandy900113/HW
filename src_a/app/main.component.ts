@@ -16,9 +16,12 @@ import { DataService } from './data.service';
       <ul>
         <li *ngFor="let movie of DataOfMovie">
           <figure class="chimga" (click)="gotoDetails2(movie)">
-              <img height="300px" width="200px" src={{movie.img}} border=4/>
-              <figcaption><p>{{movie.title}}</p>{{movie.en_title}}</figcaption>        
+              <img height="330px" width="230px" src={{movie.img}} border=4/> 
           </figure>
+          <figcaption>
+              <p>{{movie.title}}</p>
+              <p style="font-family:New Roman;position:relative;top:-25px;">{{movie.en_title}}</p>
+          </figcaption>     
         </li>
       </ul>
     </span>
