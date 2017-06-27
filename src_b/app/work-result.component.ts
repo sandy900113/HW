@@ -106,6 +106,7 @@ export class WorkResult {
         this.dataService.getOrders().then(hero => {this.orders = hero
           this.dataService.getPreBookOrders().then(hero => {
             this.preOrders = hero;
+            this.preOrders.forEach(preOrder =>{ preOrder.id=-1});
 
             this.preOrders.forEach(preOrder => {
               let tryFindSold: Order=this.orders.find(order => (
@@ -121,7 +122,6 @@ export class WorkResult {
               }
             })
             this.createOrders();
-            this.loading=false;
           });
         });
       });
@@ -130,11 +130,12 @@ export class WorkResult {
 
   createOrders(){
     if (this.success==false) { 
+      this.loading=false;
       return; 
     }
 
     this.preOrders.forEach(preOrder =>{
-      this.dataService.create(preOrder)
+      this.dataService.create(preOrder).then(order => preOrder.id=order.id).then(()=> this.loading=false);
     })
   }
 

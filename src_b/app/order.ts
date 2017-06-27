@@ -1,5 +1,4 @@
 export class Order {
-    static id_total:number=1;
     id: number;
     movie_id: number;
     time_id: number;
@@ -10,7 +9,7 @@ export class Order {
     email: String;
 
     constructor(movie_id: number ,time_id: number ,seat_number: number){
-        this.id=Order.id_total++;
+        this.id=-1;
         this.movie_id=movie_id;
         this.time_id=time_id;
         this.seat_number=seat_number;
