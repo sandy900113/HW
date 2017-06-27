@@ -12,14 +12,14 @@
 使用**Angular JS**、**in-memory web API**(模擬一個伺服器儲存資料)
 
 #### 其他補充說明
-1. 參考資料：Angular網頁的範例**[Tutorial: Tour of Heroes][0]**，一直到第七部分的**HTTP**內的新增資料為止。所以從**service**取得的資料皆使用**Promise<>**，而非**Observable<>**。
+1. 參考資料：Angular網頁的範例[Tutorial: Tour of Heroes][0]，一直到第七部分的**HTTP**內的新增資料為止。所以從**service**取得的資料皆使用**Promise<>**，而非**Observable<>**。
 2. 因為使用**in-memory web API**，所以所有的資料變動都會在重新整理頁面時被還原。
 
 #### 環境建置
-1. 下載**[node.js][1]**。
-2. 安裝**[angular cli][2]**，在cmd(命令提示字元)下指令:***npm install -g @angular/cli***。
+1. 下載[node.js][1]。
+2. 安裝[angular cli][2]，在cmd(命令提示字元)下指令:***npm install -g @angular/cli***。
 3. 建立一個空的angular project，在cmd內找到喜歡的路徑後，下指令:***ng new project_name***
-4. 安裝使用**[in-memory web API][3]**所需的東西，在專案資料夾下(或不用?)下指令:***npm install angular-in-memory-web-api --save***。
+4. 安裝使用[in-memory web API][3]所需的東西，在專案資料夾下(或不用?)下指令:***npm install angular-in-memory-web-api --save***。
 5. 下載本[github][4]，將**src_a**或**src_b**資料夾**重新命名**為**src**後，**取代**上述第三步驟所建立**專案內的src資料夾**。
 (1) **src_a**: 各個元件的title內容(有用於顯示在html上)，比較接近一般網頁。src:
 (2)   **src_b**: 各個元件的title內容(有用於顯示在html上)，為各個component的名字，方便觀察運作中的來源(component)。
