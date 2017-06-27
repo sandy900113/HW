@@ -18,13 +18,13 @@
 #### 環境建置
 1. 下載[node.js][1]。
 2. 安裝[angular cli][2]，在cmd(命令提示字元)下指令:***npm install -g @angular/cli***。
-3. 建立一個空的angular project，在cmd內找到喜歡的路徑後，下指令:***ng new project_name***
+3. 建立一個空的angular project，在cmd內找到喜歡的路徑後，下指令:***ng new project_name***。
 4. 安裝使用[in-memory web API][3]所需的東西，在專案資料夾下(或不用?)下指令:***npm install angular-in-memory-web-api --save***。
-5. 下載本[github][4]，將**src_a**或**src_b**資料夾**重新命名**為**src**後，**取代**上述第三步驟所建立**專案內的src資料夾**。
-(1) **src_a**: 各個元件的title內容(有用於顯示在html上)，比較接近一般網頁。src:
-(2)   **src_b**: 各個元件的title內容(有用於顯示在html上)，為各個component的名字，方便觀察運作中的來源(component)。
-6. 在cmd內，於第三步驟建立的專案資料夾路徑下，下指令:*ng serve*
-7. 打開瀏覽器，於網址列輸入*localhost:4200*。
+5. 下載本[github][4]，將**src_a**或**src_b**資料夾**重新命名**為**src**後，**取代**上述第三步驟所建立**專案內的src資料夾**。  
+(1) **src_a**: 各個元件的title內容(有用於顯示在html上)，比較接近一般網頁。  
+(2) **src_b**: 各個元件的title內容(有用於顯示在html上)，為各個component的名字，方便觀察運作中的來源(component)。
+6. 在cmd內，於第三步驟建立的專案資料夾路徑下，下指令:***ng serve***。
+7. 打開瀏覽器，於網址列輸入***http://localhost:4200/***。
 
 [0]:https://angular.io/tutorial
 [1]:https://nodejs.org/en/download/
