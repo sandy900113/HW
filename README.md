@@ -24,7 +24,7 @@
 (1) **src_a**: 各個元件的title內容(有用於顯示在html上)，比較接近一般網頁。  
 (2) **src_b**: 各個元件的title內容(有用於顯示在html上)，為各個component的名字，方便觀察運作中的來源(component)。
 6. 在cmd內，於第三步驟建立的專案資料夾路徑下，下指令:***ng serve***。
-7. 打開瀏覽器，於網址列輸入***http://localhost:4200/***。
+7. 打開瀏覽器，於網址列輸入http://localhost:4200/。
 
 [0]:https://angular.io/tutorial
 [1]:https://nodejs.org/en/download/
